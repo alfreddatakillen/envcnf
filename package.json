@@ -1,0 +1,19 @@
+{
+  "name": "envcnf",
+  "version": "1.0.0",
+  "description": "Module for handling some environment variable config setups.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/nyc --reporter=html --reporter=text node_modules/.bin/mocha test/**/*.js"
+  },
+  "author": "Alfred Godoy <alfred@nurd.nu>",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "4.0.0",
+    "mocha": "3.4.2",
+    "nyc": "10.3.2",
+    "testdouble": "2.1.2"
+  }
+}
