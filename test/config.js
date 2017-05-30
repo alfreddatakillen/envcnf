@@ -58,6 +58,12 @@ describe('Config', () => {
 				});
 
 			});
+			it('will return an empty object if no matches', () => {
+				td.when(config.env()).thenReturn({
+					'WHATEVER': 'yeah'
+				});
+				expect(config.getMap('COOL_NICKS')).to.deep.equal({});
+			});
 		});
 
 		describe('getList()', () => {
@@ -82,8 +88,14 @@ describe('Config', () => {
 					'A nice js module'
 				]);
 			});
-		});
 
+			it('will return an empty array if no matches', () => {
+				td.when(config.env()).thenReturn({
+					'WHATEVER': 'yeah'
+				});
+				expect(config.getList('SANTA_CLAUS_WISH_LIST')).to.deep.equal([]);
+			});
+		});
 	});
 
 });
